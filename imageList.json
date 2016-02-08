@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Lily",
+        "desc": "Beatiful and fancy cat",
+        "src": "1.png"
+    },
+    {
+        "title": "Nancy",
+        "desc": "Lazy and friendly",
+        "src": "2.png"
+    },
+    {
+        "title": "Andy",
+        "desc": "Talkative... Sometimes too much",
+        "src": "3.png"
+    },
+    {
+        "title": "Nepie",
+        "desc": "Ice-ice, baby =)",
+        "src": "4.png"
+    },
+    {
+        "title": "Lola",
+        "desc": "Ice-ice, baby =)",
+        "src": "5.png"
+    },
+    {
+        "title": "Estis family",
+        "desc": "We are the cutiest!",
+        "src": "6.png"
+    },
+    {
+        "title": "Bob",
+        "desc": "Are you afraid of me?",
+        "src": "7.png"
+    }
+]
