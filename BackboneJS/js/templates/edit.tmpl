@@ -1,0 +1,25 @@
+<div class="col-md-4">
+    <div class="panel panel-default">
+        <div class="panel-heading ">Editor</div>
+        <div class="panel-body">
+            <p><button ng-click="showEditPart = !showEditPart" class="btn btn-success">Update Data</button></p>
+            <div class="wrapper" ng-show="showEditPart">
+                
+                <div class="input-group input-group" style="margin-top: 10px;">
+                    <span class="input-group-addon" id="title">Title</span>
+                    <input type="text" class="form-control" placeholder="Username" ng-model="photo.title">
+                </div>
+                
+                <div class="input-group input-group" style="margin-top: 10px;">
+                    <span class="input-group-addon" id="desc">Description</span>
+                    <input type="text" class="form-control" placeholder="Username" ng-model="photo.desc">
+                </div>
+                
+                <div class="input-group input-group" style="margin-top: 10px;">
+                    <span class="input-group-addon" id="clicks">Total Clicks</span>
+                    <input type="text" class="form-control" placeholder="Username" ng-model="photo.clicks">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
