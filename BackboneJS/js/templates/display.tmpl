@@ -1,0 +1,19 @@
+<div class="col-md-4">
+    <div class="panel panel-default">
+        <div class="panel-heading ">Render</div>
+        <div class="panel-body">
+            <div class="photoDetails">
+                <div class="photoDescription">
+                    <h4 style="margin-top: 0px;">Look at <span>{{photo.title}}</span></h4>
+                </div>
+                <p>{{photo.desc}}</p>
+                <div class="photoRender" ng-click="updateCounter()">
+                    <img ng-src="images/{{photo.src}}">
+                </div>
+                <div class="photoClicks">
+                    <h4 style="margin-bottom: 0;">Total clicked: {{photo.clicks}} times</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
