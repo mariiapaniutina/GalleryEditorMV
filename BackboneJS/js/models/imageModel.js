@@ -7,7 +7,8 @@ define(function(require) {
         defaults:{
         	title: 'Image title',
         	desc: 'Image description',
-        	src: '1.png'
+        	src: '1.png',
+        	clicks: 0
         },
     });
 

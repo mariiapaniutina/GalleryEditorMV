@@ -43,18 +43,16 @@ define(function(require) {
 		},
 		imageClick: function(e){
 			e.preventDefault();
-			console.log(e.currentTarget);
+			
 			var title = $(e.currentTarget).html();
 			var src = $(e.currentTarget).attr('data-src');
 			var desc = $(e.currentTarget).find('.desc').html();
-			
 			
 			this.displayView.model.set({
 				"title": title,
 				"src": src,
 				"desc": desc
 			});
-			console.log('display.model', this.displayView.model);
 			this.displayView.render();
 			
 		},

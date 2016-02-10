@@ -16,12 +16,9 @@ define(function(require) {
 		render: function(){
 			var self = this;
 		 	
-		 	//var obj = {imageList: data.toJSON()};
 		 	var html = Mustache.to_html(template, this.model.toJSON());
-		 			
-		 			$(self.el).html(html);
-		 	
-
+		 	$(self.el).html(html);
+		 
 		}
     });
 
