@@ -33,7 +33,6 @@ define(function(require) {
 						"src": data.toJSON()[0].src,
 						"desc": data.toJSON()[0].desc
 					});
-					self.displayView.render();
 		 			
 		 			$(self.el).html(html);
 		 		}
@@ -53,7 +52,6 @@ define(function(require) {
 				"src": src,
 				"desc": desc
 			});
-			this.displayView.render();
 			
 		},
         doSomething: function() {

@@ -10,7 +10,9 @@ define(function(require) {
     var DisplayView = Backbone.View.extend({
     	el: '#view_template',
     	initialize: function(){
+    		var self = this;
     		this.model = new ImageModel();
+    		this.model.on('change', function(){self.render()}, this);
     		return this.render();
     	},
 		render: function(){
