@@ -12,51 +12,48 @@ define(function(require) {
     var ListView = Backbone.View.extend({
     	el: '#list_template',
     	initialize: function(){
-    		return this.render();
+    	    	return this.render();
     	},
     	events:{
     		'click .photosList a': 'imageClick'
     	},
-		render: function(){
-			var self = this;
-			this.displayView = new DisplayView();
-		 	
-		 	this.collection = new ImageCollection();
-		 	this.collection.fetch({
-		 		success: function(data){
-		 			
-		 			var obj = {imageList: data.toJSON()};
-		 			var html = Mustache.to_html(template, obj);
-		 			
-		 			self.displayView.model.set({
-						"title": data.toJSON()[0].title,
-						"src": data.toJSON()[0].src,
-						"desc": data.toJSON()[0].desc
-					});
-		 			
-		 			$(self.el).html(html);
-		 		}
-		 	});
-		 	
-		 	this.model = new ImageModel();
-		},
-		imageClick: function(e){
-			e.preventDefault();
-			
-			var title = $(e.currentTarget).html();
-			var src = $(e.currentTarget).attr('data-src');
-			var desc = $(e.currentTarget).find('.desc').html();
-			
-			this.displayView.model.set({
-				"title": title,
-				"src": src,
-				"desc": desc
-			});
-			
-		},
-        doSomething: function() {
-            console.log('My view  is doing something!');
-        }
+	render: function(){
+		var self = this;
+		this.displayView = new DisplayView();
+	 	
+	 	this.collection = new ImageCollection();
+	 	this.collection.fetch({
+	 		success: function(data){
+	 			
+	 			var obj = {imageList: data.toJSON()};
+	 			var html = Mustache.to_html(template, obj);
+	 			
+	 			self.displayView.model.set({
+					"title": data.toJSON()[0].title,
+					"src": data.toJSON()[0].src,
+					"desc": data.toJSON()[0].desc
+				});
+	 			
+	 			$(self.el).html(html);
+	 		}
+	 	});
+	 	
+	 	this.model = new ImageModel();
+	},
+	imageClick: function(e){
+		e.preventDefault();
+		
+		var title = $(e.currentTarget).html();
+		var src = $(e.currentTarget).attr('data-src');
+		var desc = $(e.currentTarget).find('.desc').html();
+		
+		this.displayView.model.set({
+			"title": title,
+			"src": src,
+			"desc": desc
+		});
+		
+	}
     });
 
     return ListView;
