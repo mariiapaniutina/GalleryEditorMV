@@ -12,7 +12,6 @@ define(function(require) {
             console.log('Hit the base route.');
             
             var myView = new ListView();
-            myView.doSomething();
         }
     });
 
