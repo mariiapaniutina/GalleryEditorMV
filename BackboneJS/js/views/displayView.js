@@ -9,18 +9,30 @@ define(function(require) {
 
     var DisplayView = Backbone.View.extend({
     	el: '#view_template',
+    	
+    	events: {
+    		'click .photoRender img': 'clicksUpdate'
+    	},
+    	
     	initialize: function(){
     		var self = this;
     		this.model = new ImageModel();
-    		this.model.on('change', function(){self.render()}, this);
     		return this.render();
     	},
+    	
 		render: function(){
 			var self = this;
 		 	
 		 	var html = Mustache.to_html(template, this.model.toJSON());
 		 	$(self.el).html(html);
 		 
+		},
+		
+		clicksUpdate: function(e){
+			e.preventDefault();
+			var clicks = this.model.get('clicks');
+			this.model.set({'clicks': clicks + 1});
+			this.render();
 		}
     });
 

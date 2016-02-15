@@ -5,55 +5,53 @@ define(function(require) {
     var Mustache = require('mustache');
     
     var template = require('text!../templates/list.tmpl');
+    var template_item = require('text!../templates/list_item.tmpl');
     var ImageModel = require('models/ImageModel');
     var ImageCollection = require('collections/ImageCollection');
     var DisplayView = require('views/displayView');
 
     var ListView = Backbone.View.extend({
     	el: '#list_template',
+    	
     	initialize: function(){
-    	    	return this.render();
+    		$(this.el).html(Mustache.to_html(template, {}));
+    	    return this.render();
     	},
+    	
     	events:{
     		'click .photosList a': 'imageClick'
     	},
-	render: function(){
-		var self = this;
-		this.displayView = new DisplayView();
-	 	
-	 	this.collection = new ImageCollection();
-	 	this.collection.fetch({
-	 		success: function(data){
-	 			
-	 			var obj = {imageList: data.toJSON()};
-	 			var html = Mustache.to_html(template, obj);
-	 			
-	 			self.displayView.model.set({
-					"title": data.toJSON()[0].title,
-					"src": data.toJSON()[0].src,
-					"desc": data.toJSON()[0].desc
-				});
-	 			
-	 			$(self.el).html(html);
-	 		}
-	 	});
-	 	
-	 	this.model = new ImageModel();
-	},
-	imageClick: function(e){
-		e.preventDefault();
-		
-		var title = $(e.currentTarget).html();
-		var src = $(e.currentTarget).attr('data-src');
-		var desc = $(e.currentTarget).find('.desc').html();
-		
-		this.displayView.model.set({
-			"title": title,
-			"src": src,
-			"desc": desc
-		});
-		
-	}
+    	
+		render: function(){
+			var self = this;
+			
+			this.displayView = new DisplayView();
+		 	this.collection = new ImageCollection();
+		 	this.collection.fetch({
+		 		success: function(data){
+		 			var index = 0;
+		 			self.collection.each(function(model){
+		 				model.set({item_id: index++});
+		 				var txt = Mustache.to_html(template_item, model.toJSON());
+		 				$(self.el).find('.photosList').append(txt);
+		 			});
+		 			
+		 			//render the first item
+		 			$('.photosList a').first().click();
+		 		}
+		 	});
+		 	
+		},
+		imageClick: function(e){
+			e.preventDefault();
+			
+			var index = $(e.currentTarget).attr('data-id');
+			var currentModel = this.collection.at(index);
+			
+			this.displayView.model = currentModel;
+			this.displayView.render();
+			
+		}
     });
 
     return ListView;
