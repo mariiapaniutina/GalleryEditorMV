@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05290f20-569d-4bca-bebf-2a12c765a186" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BackboneJS/js/templates/edit.tmpl" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/BackboneJS/js/templates/display.tmpl" afterPath="$PROJECT_DIR$/BackboneJS/js/templates/displayTemplate.tmpl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/BackboneJS/js/templates/list_item.tmpl" afterPath="$PROJECT_DIR$/BackboneJS/js/templates/listItemTemplate.tmpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/index.html" afterPath="$PROJECT_DIR$/BackboneJS/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/js/app.js" afterPath="$PROJECT_DIR$/BackboneJS/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/js/main.js" afterPath="$PROJECT_DIR$/BackboneJS/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/js/views/displayView.js" afterPath="$PROJECT_DIR$/BackboneJS/js/views/displayView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackboneJS/js/views/listView.js" afterPath="$PROJECT_DIR$/BackboneJS/js/views/listView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GalleryEditorMV.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,6 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BackboneJS/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.625">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackboneJS/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -70,20 +85,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.tmpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackboneJS/js/templates/list.tmpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editView.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="editView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BackboneJS/js/views/editView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54545456">
+            <state vertical-scroll-proportion="0.0">
               <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding />
             </state>
@@ -120,16 +125,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editTemplate.tmpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BackboneJS/js/templates/editTemplate.tmpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -154,6 +149,7 @@
         <option value="$PROJECT_DIR$/BackboneJS/js/views/displayView.js" />
         <option value="$PROJECT_DIR$/BackboneJS/js/views/listView.js" />
         <option value="$PROJECT_DIR$/BackboneJS/js/views/editView.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -510,16 +506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BackboneJS/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.75">
-          <caret line="34" column="63" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BackboneJS/js/templates/editTemplate.tmpl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -594,8 +580,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BackboneJS/js/views/editView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54545456">
+        <state vertical-scroll-proportion="0.0">
           <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackboneJS/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.625">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
