@@ -5,10 +5,11 @@ define(function(require) {
     var Mustache = require('mustache');
     
     var template = require('text!../templates/list.tmpl');
-    var template_item = require('text!../templates/list_item.tmpl');
-    var ImageModel = require('models/ImageModel');
+    var template_item = require('text!../templates/listItemTemplate.tmpl');
+    var ImageModel = require('models/imageModel');
     var ImageCollection = require('collections/ImageCollection');
     var DisplayView = require('views/displayView');
+	var EditView = require('views/editView');
 
     var ListView = Backbone.View.extend({
     	el: '#list_template',
@@ -26,6 +27,8 @@ define(function(require) {
 			var self = this;
 			
 			this.displayView = new DisplayView();
+			this.editView = new EditView();
+
 		 	this.collection = new ImageCollection();
 		 	this.collection.fetch({
 		 		success: function(data){
@@ -45,12 +48,23 @@ define(function(require) {
 		imageClick: function(e){
 			e.preventDefault();
 			
-			var index = $(e.currentTarget).attr('data-id');
-			var currentModel = this.collection.at(index);
+			var index = $(e.currentTarget).attr('data-id') || 0;
+
+			this.updateDisplayView(index);
+			this.updateEditView(index);
 			
+		},
+		updateDisplayView: function(index){
+			var currentModel = this.collection.at(index);
+
 			this.displayView.model = currentModel;
 			this.displayView.render();
-			
+		},
+		updateEditView: function(index){
+			var currentModel = this.collection.at(index);
+
+			this.editView.model = currentModel;
+			this.editView.render();
 		}
     });
 
