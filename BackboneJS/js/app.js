@@ -9,6 +9,6 @@ define(function(require) {
             var appRouter = new AppRouter();
             Backbone.history.start();
         }
-    }
+    };
     return App;
 });

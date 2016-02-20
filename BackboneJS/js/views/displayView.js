@@ -4,8 +4,8 @@ define(function(require) {
     var $ = require('jquery');
     var Mustache = require('mustache');
     
-    var template = require('text!../templates/display.tmpl');
-    var ImageModel = require('models/ImageModel');
+    var template = require('text!../templates/displayTemplate.tmpl');
+    var ImageModel = require('models/imageModel');
 
     var DisplayView = Backbone.View.extend({
     	el: '#view_template',
@@ -17,6 +17,7 @@ define(function(require) {
     	initialize: function(){
     		var self = this;
     		this.model = new ImageModel();
+			this.editView = new EditView();
     		return this.render();
     	},
     	
@@ -33,6 +34,7 @@ define(function(require) {
 			var clicks = this.model.get('clicks');
 			this.model.set({'clicks': clicks + 1});
 			this.render();
+
 		}
     });
 
