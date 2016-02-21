@@ -11,22 +11,39 @@ define(function(require) {
         el: '#edit_template',
 
         events: {
-
+            "click button#editUpdate": "updateData"
         },
 
         initialize: function(){
             var self = this;
             this.model = new ImageModel();
 
-            return this.render();
+            this.render();
         },
 
-        render: function(){
+        render: function(model){
+            if (!model) {
+                model = this.model;
+            }
             var self = this;
 
-            var html = Mustache.to_html(template, this.model.toJSON());
+            var html = Mustache.to_html(template, model.toJSON());
             $(self.el).html(html);
 
+        },
+
+        updateData: function(e){
+            e.preventDefault();
+
+            var title = $('#edit_template #editName').val();
+            var desc = $('#edit_template #editDesc').val();
+            var clicks = $('#edit_template #editClicks').val();
+
+            this.model.set({
+                'clicks': clicks
+            });
+
+            this.render();
         }
     });
 
