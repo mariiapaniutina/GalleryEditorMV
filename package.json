@@ -1,0 +1,26 @@
+{
+  "name": "gallery_editor_mv*",
+  "version": "1.0.0",
+  "description": "<h1>GalleryEditorMV*</h1> <h4>Here will be small gallery editor done on the most popular frameworks and without it</h4> | Already done | ----------- | No Framework | | AngularJS/Twitter Bootstrap/jQuery | | Backbone/Twitter Bootstrap/jQuery: in progress |",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariiapaniutina/GalleryEditorMV.git"
+  },
+  "keywords": [
+    "vanilla",
+    "js",
+    "angular",
+    "backbone",
+    "require"
+  ],
+  "author": "Mariia Paniutina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariiapaniutina/GalleryEditorMV/issues"
+  },
+  "homepage": "https://github.com/mariiapaniutina/GalleryEditorMV#readme"
+}
