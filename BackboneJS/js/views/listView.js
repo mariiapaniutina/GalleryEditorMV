@@ -6,7 +6,6 @@ define(function(require) {
     
     var template = require('text!../templates/list.tmpl');
     var template_item = require('text!../templates/listItemTemplate.tmpl');
-    var ImageModel = require('models/imageModel');
     var ImageCollection = require('collections/ImageCollection');
     var DisplayView = require('views/displayView');
     var EditView = require('views/editView');
@@ -16,14 +15,16 @@ define(function(require) {
     	
     	initialize: function(){
     		$(this.el).html(Mustache.to_html(template, {}));
-    	    return this.render();
+			this.render();
     	},
     	
     	events:{
-    		'click .photosList a': 'imageClick'
+    		'click .photosList a': 'listItemClick'
     	},
     	
 		render: function(){
+
+			console.log('render was called');
 			var self = this;
 			
 			this.displayView = new DisplayView();
@@ -45,7 +46,7 @@ define(function(require) {
 		 	});
 		 	
 		},
-		imageClick: function(e){
+		listItemClick: function(e){
 			e.preventDefault();
 			
 			var index = $(e.currentTarget).attr('data-id') || 0;

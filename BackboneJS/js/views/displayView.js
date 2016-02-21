@@ -7,6 +7,8 @@ define(function(require) {
     var template = require('text!../templates/displayTemplate.tmpl');
     var ImageModel = require('models/imageModel');
 
+	var EditView = require('views/editView');
+
     var DisplayView = Backbone.View.extend({
     	el: '#view_template',
     	
@@ -16,6 +18,7 @@ define(function(require) {
     	
     	initialize: function(){
     		var self = this;
+			this.editView = new EditView();
     		this.model = new ImageModel();
     		return this.render();
     	},
@@ -32,7 +35,9 @@ define(function(require) {
 			e.preventDefault();
 			var clicks = this.model.get('clicks');
 			this.model.set({'clicks': clicks + 1});
+
 			this.render();
+			this.editView.render(this.model);
 
 		}
     });

@@ -6,7 +6,12 @@ define(function(require) {
 
     var ImageCollection = Backbone.Collection.extend({
     	url:'https://raw.githubusercontent.com/mariiapaniutina/GalleryEditorMV/master/imageList.json',
-        model: ImageModel
+        model: ImageModel,
+        initialize: function(){
+            this.on('change', function(){
+                console.log('model from collection was changed');
+            }, this);
+        }
     });
 
     return ImageCollection;
