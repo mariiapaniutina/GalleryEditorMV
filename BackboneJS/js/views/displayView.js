@@ -17,7 +17,6 @@ define(function(require) {
     	initialize: function(){
     		var self = this;
     		this.model = new ImageModel();
-			this.editView = new EditView();
     		return this.render();
     	},
     	

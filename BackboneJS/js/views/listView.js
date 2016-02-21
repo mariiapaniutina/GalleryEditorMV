@@ -9,7 +9,7 @@ define(function(require) {
     var ImageModel = require('models/imageModel');
     var ImageCollection = require('collections/ImageCollection');
     var DisplayView = require('views/displayView');
-	var EditView = require('views/editView');
+    var EditView = require('views/editView');
 
     var ListView = Backbone.View.extend({
     	el: '#list_template',
