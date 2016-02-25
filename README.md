@@ -5,3 +5,8 @@
 | No Framework |
 | AngularJS/Twitter Bootstrap/jQuery |
 | Backbone/Twitter Bootstrap/jQuery: in progress |
+
+<h2>Start web-server</h2>
+```
+node index.js
+```
