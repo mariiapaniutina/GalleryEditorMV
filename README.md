@@ -7,7 +7,11 @@
 | Backbone/Twitter Bootstrap/jQuery: in progress |
 
 <h2>Start web-server</h2>
+<p>Command-line</p>
 ```
 node index.js
 ```
-<h4>And open http://localhost:8082</h4>
+<p>Open in browser</p>
+```
+http://localhost:8082
+```
