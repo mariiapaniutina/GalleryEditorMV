@@ -58,5 +58,5 @@ define(function(require) {
 		}
     });
 
-    return ListView;
+    return ListView; 
 });
