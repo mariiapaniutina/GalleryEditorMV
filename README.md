@@ -5,3 +5,13 @@
 | No Framework |
 | AngularJS/Twitter Bootstrap/jQuery |
 | Backbone/Twitter Bootstrap/jQuery: in progress |
+
+<h2>Start web-server</h2>
+<p>Command-line</p>
+```
+node index.js
+```
+<p>Open in browser</p>
+```
+http://localhost:8082
+```

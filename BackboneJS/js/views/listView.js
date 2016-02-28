@@ -7,8 +7,10 @@ define(function(require) {
     var template = require('text!../templates/list.tmpl');
     var template_item = require('text!../templates/listItemTemplate.tmpl');
     var ImageCollection = require('collections/ImageCollection');
+
 	var ImageModel = require('models/imageModel');
     var DisplayView = require('views/displayView');
+
 
     var ListView = Backbone.View.extend({
     	el: '#list_template',
@@ -27,8 +29,9 @@ define(function(require) {
 			console.log('render was called');
 			var self = this;
 			this.model = new ImageModel();
-			
+
 			this.displayView = new DisplayView({model: this.model});
+
 
 		 	this.collection = new ImageCollection();
 		 	this.collection.fetch({
@@ -51,7 +54,7 @@ define(function(require) {
 			
 			var index = $(e.currentTarget).attr('data-id') || 0;
 			this.model.set(this.collection.at(index).attributes);
-
+			
 		}
     });
 
