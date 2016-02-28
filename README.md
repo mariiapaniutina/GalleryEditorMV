@@ -3,8 +3,9 @@
 | Already done |
 -----------
 | No Framework |
-| AngularJS/Twitter Bootstrap/jQuery |
-| Backbone/Twitter Bootstrap/jQuery: in progress |
+| Angular/Bootstrap/jQuery |
+| Backbone/Require/Bootstrap/jQuery |
+| Ember : in progress |
 
 <h2>Start web-server</h2>
 <p>Command-line</p>
