@@ -5,7 +5,6 @@ define(function(require) {
     var Mustache = require('mustache');
     
     var template = require('text!../templates/displayTemplate.tmpl');
-    var ImageModel = require('models/imageModel');
 
 	var EditView = require('views/editView');
 
@@ -18,8 +17,11 @@ define(function(require) {
     	
     	initialize: function(){
     		var self = this;
-			this.editView = new EditView();
-    		this.model = new ImageModel();
+
+			this.listenTo(this.model, 'change', this.render);
+
+			this.editView = new EditView({model: this.model});
+
     		return this.render();
     	},
     	
@@ -33,11 +35,9 @@ define(function(require) {
 		
 		clicksUpdate: function(e){
 			e.preventDefault();
-			var clicks = this.model.get('clicks');
-			this.model.set({'clicks': clicks + 1});
 
-			this.render();
-			this.editView.render(this.model);
+			var clicks = +this.model.get('clicks');
+			this.model.set({'clicks': clicks + 1});
 
 		}
     });

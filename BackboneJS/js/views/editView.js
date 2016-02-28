@@ -5,7 +5,6 @@ define(function(require) {
     var Mustache = require('mustache');
 
     var template = require('text!../templates/editTemplate.tmpl');
-    var ImageModel = require('models/imageModel');
 
     var EditView = Backbone.View.extend({
         el: '#edit_template',
@@ -15,19 +14,14 @@ define(function(require) {
         },
 
         initialize: function(){
-            var self = this;
-            this.model = new ImageModel();
-
+            this.listenTo(this.model, 'change', this.render);
             this.render();
         },
 
-        render: function(model){
-            if (!model) {
-                model = this.model;
-            }
+        render: function(){
             var self = this;
 
-            var html = Mustache.to_html(template, model.toJSON());
+            var html = Mustache.to_html(template, this.model.toJSON());
             $(self.el).html(html);
 
         },
@@ -40,10 +34,11 @@ define(function(require) {
             var clicks = $('#edit_template #editClicks').val();
 
             this.model.set({
+                'desc': desc,
+                'title': title,
                 'clicks': clicks
             });
 
-            this.render();
         }
     });
 
