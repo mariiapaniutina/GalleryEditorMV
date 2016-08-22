@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gallery Editor with MarionetteBackbone and DustJS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+    </head>
+    <body>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" style="position: inherit;" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <span class="navbar-brand" style="color: #fff;">Gallery Editor with MarionetteBackbone</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container" style="margin-top: 20px;">
+
+            <div class="row">
+
+                <div class="col-md-4" id="list_template"></div>
+
+                <div class="col-md-4" id="view_template"></div>
+
+                <div class="col-md-4" id="edit_template"></div>
+
+            </div>
+        </div>
+
+        <script data-main="js/main" src="node_modules/requirejs/require.js"></script>
+    </body>
+</html>
