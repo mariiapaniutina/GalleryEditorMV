@@ -3,6 +3,8 @@ define(function(require) {
     var Marionette = require('marionette');
 	var Router = require('appRouter');
 
+	/*
+
 	var Application = new Marionette.Application();
 
 	var onAppBeforeStart = function(){
@@ -29,4 +31,17 @@ define(function(require) {
 	Application.on('start', onAppStart);
 
     return Application;
+
+    */
+
+	var RootView = require('views/rootView');
+	var App = Marionette.Application.extend({
+		region: '#root',
+
+		onStart: function (){
+			this.showView(new RootView());
+		}
+	});
+
+	return App;
 });
