@@ -9,9 +9,10 @@
   "author": "Mariia Paniutina",
   "license": "ISC",
   "devDependencies": {
-    "backbone.marionette": "^2.4.7",
+    "backbone.marionette": "^3.0.0",
     "dustjs-linkedin": "^2.7.3",
     "jquery": "^3.1.0",
+    "latest-version": "^2.0.0",
     "requirejs": "^2.2.0",
     "requirejs-text": "^2.0.12",
     "underscore": "^1.8.3"
